@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/breakPoints.css">
+  <title>Frontend Mentor | News homepage</title>
+</head>
+<body>
+   <header>
+    <div class="line">
+      <div class="logo"><img src="assets/images/logo.svg" alt="logo"></div>
+      <div class="menu-icon">
+        <img src="assets/images/icon-menu.svg" alt="open" onclick="btnOpen()">
+      </div>
+    </div>
+    <nav id="none">  
+      <div id="shadow" class="container-menu">
+        <ul id="list" class="menu">
+          <div class="menu-icon-close ">
+            <img src="assets/images/icon-menu-close.svg" alt="close" id="close" onclick="closeOut()">
+          </div>
+           <li><a href="#">Home</a></li>
+           <li><a href="#">New</a></li>
+           <li><a href="#">Popular</a></li>
+           <li><a href="#">Trending</a></li>
+           <li><a href="#">Categories</a></li>
+        </ul>
+      </div>
+    </nav>
+   </header>
+   <main class="container">
+     <section class="home">
+      <div class="banner">
+        <img src="assets/images/image-web-3-mobile.jpg" alt="this is only a banner" class="mobile">
+        <img src="assets/images/image-web-3-desktop.jpg" alt="this is only a banner" class="desk">
+      </div>
+      <div class="home-information">
+        <h1 class="home__Titile">The Bright Future of Web 3.0?</h1>
+        <div class="z">
+          <p class="home__Text"> We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?</p>
+          <button class="btn__info">Read more</button>
+        </div>
+      </div>
+     </section>
+     <aside class="aside-zone">
+       <h2>New</h2>
+       <div class="row">
+        <h5>Hydrogen VS Electric Cars</h5>
+        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+       </div>
+       <hr>
+       <div class="row">
+        <h5>The Downsides of AI Artistry</h5>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+       </div>
+       <hr>
+        <div class="row">
+        <h5>Is VC Funding Drying Up?</h5>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+       </div>
+     </aside>
+   </main>
+   <section class="card-container">
+    <div class="rows">
+      <article class="card">
+        <div class="block__img">
+          <img src="assets/images/image-retro-pcs.jpg" alt="retro-pc">
+        </div>
+        <div class="card__info">
+          <h3><span class="light">01</span></h3>
+          <h5>Reviving Retro PCs</h5>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="block__img">
+          <img src="assets/images/image-top-laptops.jpg" alt="top-laptops">
+        </div>
+        <div class="card__info">
+          <h3><span class="light">02</span></h3>
+          <h5>Top 10 Laptops of 2022</h5>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </article>
+      <article class="card little-space">
+        <div class="block__img">
+          <img src="assets/images/image-gaming-growth.jpg" alt="gaming-growth">
+        </div>
+        <div class="card__info">
+          <h3><span class="light">03</span></h3>
+          <h5>The Growth of Gaming</h5>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </article>
+    </div>
+   </section>
+</body>
+<script src="./assets/js/menuMobile.js"></script>
+</html>

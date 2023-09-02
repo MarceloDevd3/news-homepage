@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+
+
+@keyframes homeLoad {
+    0% {
+        opacity: 100%;
+    }
+
+    75% {
+        opacity: 75%;
+    }
+
+    55% {
+        opacity: 55%;
+    }
+
+    0% {
+        opacity: 0%;
+    }
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    /*padding: 5em;*/
+    padding: 1em 1em;
+
+    animation:  homeLoad linear 1.7s;
+}
+
+
+
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    /*### Neutral*/
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    -Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+    }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:var(--Very-dark-blue);
+}
+
+h5:hover {
+    color: var(--Soft-red);
+    cursor: pointer;
+}
+
+
+.mobile {
+    display: block;
+}
+
+.desk {
+    display: none;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+header .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em .5em;
+   /* padding: 1em 1.5em;*/
+}
+
+.menu-icon, .menu-icon-close , .logo {
+    cursor: pointer;
+}
+
+
+/*navbar*/
+
+nav .container-menu, .menu {
+  display: none;
+}
+
+
+nav .active , .container-menu .active , .menu .active {
+    display: block;
+} 
+
+nav  > .container-menu  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+
+@keyframes loading  {
+    0% {
+        position: absolute;
+        right: -85px;
+    }
+
+    100% {
+        position: absolute;
+        right: 0;
+    }
+}
+
+nav .container-menu  > .menu  {
+    position: absolute;
+    right: 0;
+    width: 65vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #ffffff;
+    animation:  loading linear .4s;
+}
+
+.menu .menu-icon-close {
+    width: 25px;
+    margin: 1em 2em;
+    float: right;
+}
+
+.menu  > li {
+    font-size: 1.2em;
+    position: relative;
+    top: 7em;
+    left: 2em;
+    margin-top: 1em;
+}
+
+
+
+/*grid*/
+
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas: ' banner' 'hero' ;
+}
+
+.home {
+  grid-area: banner;
+}
+
+
+/*aside*/
+
+.aside-zone {
+    grid-area: hero;
+    height: 493px;
+    background-color: black;
+    color: #fff;
+    align-items: center;
+    padding: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--Soft-orange);
+}
+
+.row p {
+    font-size: 1.1em;
+    width: 80%;
+    margin-top: -10px;
+}
+
+.row {
+    margin: 30px 0;
+}
+
+
+
+li > a:hover {
+    color: var(--Soft-red);
+}
+
+
+
+.home__Titile {
+    font-size: 3.2rem;
+    width: 75%;
+    margin-bottom: 0.4em;
+}
+
+.home__Text {
+    font-size:1.2em ;
+    width: 87%;
+    margin-bottom: 1.4em;
+}
+
+
+button {
+    width: 187px;
+    height: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    background-size: 100%;
+}
+
+.btn__info {
+    background-color: var(--Soft-red);
+    color: var(--Off-white);
+}
+
+@keyframes moveColor {
+    0% {
+        background-size: -100px ;
+        background-color: hsl(5, 84%, 70%);
+        color: antiquewhite;
+    }
+
+    100% {
+        background-size: 100px ;
+        background-color: hsl(5, 93%, 60%);
+        color: #fff;
+    }
+}
+
+.btn__info:hover, .btn__info:active {
+    animation: moveColor ease-in 1.5s;
+}
+
+
+/*row card */
+
+
+.rows > .card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 25px;
+}
+
+.card__info {
+    margin-left: 35px;
+}
+
+.card__info p {
+    width: 210px;
+}
+
+
+.card > .block__img img {
+    max-width: 131px;
+    height: 145px;
+}
+
+
+
+.light {
+    color: var(--Grayish-blue);
+    font-size: 2.2em;
+    margin-bottom: 1.7em;
+}
+
+h5  {
+    font-size: 1.4em;
+    margin-top: 0.7em;
+    margin-bottom: 1.2em;
+}
+
+.card__info p {
+    color: var(--Grayish-blue);
+    font-size: 1em;
+}
+
